@@ -1,0 +1,12 @@
+*.exe
+*.msi
+*.zip
+*.7z
+*.pdb
+*.dll
+*.db
+*.log
+.env
+.DS_Store
+Thumbs.db
+Desktop.ini

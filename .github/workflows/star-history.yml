@@ -1,0 +1,29 @@
+name: Update star history
+
+on:
+  schedule:
+    - cron: '30 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Check whether chart data exists
+        id: stars
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "count=$(gh api repos/$GITHUB_REPOSITORY --jq .stargazers_count)" >> "$GITHUB_OUTPUT"
+      - name: Render star history
+        if: steps.stars.outputs.count != '0'
+        uses: xpzouying/star-history@8b1f26dc5e9a17caa75da9351b688509ef312811
+        with:
+          branch: main
+          out-light: docs/images/star-history.svg
+          out-dark: docs/images/star-history-dark.svg
+          commit: true

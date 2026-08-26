@@ -1,0 +1,18 @@
+# Security Policy
+
+## Supported version
+
+Security corrections are provided for the latest LOCALOCR release.
+
+| Version | Supported |
+| --- | --- |
+| 1.5.1.100 | Yes |
+| Earlier builds | Update recommended |
+
+## Reporting a vulnerability
+
+Do not publish sensitive vulnerability details in a normal issue. Use GitHub's private vulnerability reporting page for this repository:
+
+https://github.com/promptedteam/LOCALOCR/security/advisories/new
+
+Include the affected version, Windows version, reproduction steps, impact, and any relevant logs with personal file paths removed.
