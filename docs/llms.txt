@@ -8,6 +8,7 @@ Windows 10 and Windows 11 x64 are supported today. macOS and Linux are coming so
 
 - [Official product page](https://searchin.pages.dev/): Single-page features, downloads, tutorials, privacy information, and roadmap.
 - [Search field guide](https://searchin.pages.dev/#search-guide): Filename versus document-content search, directory scope, OCR, and interpreting results.
+- [Search app comparison](https://searchin.pages.dev/#compare): Source-linked workflow comparison with Everything, Listary, and Windows Search; not an exhaustive feature audit or a speed/memory benchmark.
 - [Getting started](https://searchin.pages.dev/#start): Required Microsoft runtimes, engine catalog, local indexing, and first In-File search.
 - [Tutorials](https://searchin.pages.dev/#guides): Four one-minute captioned videos. The setup chapter is a simulation; three chapters show the real app with synthetic files.
 - [Preview support](https://searchin.pages.dev/#previews): Supported categories and important fidelity/codec limits.

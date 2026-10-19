@@ -55,6 +55,13 @@ The website has no sign-in or analytics scripts.
 SEARCH-IN 2.1.0.103 supports in-app update checking and downloading with a quiet download indicator. Users choose when to review and install an update.
 LOCALOCR 1.x is a separate installation. SEARCH-IN does not silently migrate or delete its databases or credentials.
 
+## Comparison With Other Search Apps
+
+The landing page includes a source-linked workflow comparison with Everything, Listary, and Windows Search. Vendor descriptions refer to their official documentation, checked 19 October 2026, and may vary by version, edition, plugins, and configuration.
+Everything emphasizes filename/folder search and search functions; its documentation also describes content searches. Listary emphasizes file search, app launching, and Open/Save folder switching. Windows Search indexes names, properties, and supported contents according to its locations and file-type settings.
+SEARCH-IN's emphasized combination is a filename catalog, a dedicated document-content index, Match snippets, shared embedded previews, and optional approved AI OCR with provider/key control.
+This comparison is not a claim that all competing products lack those features. There is no comparative speed, memory, or accuracy benchmark and no promise that SEARCH-IN is universally better.
+
 ## Roadmap
 
 Directions include continued performance work, more reliable document previews, the LOCALTOOL taskbar companion in development, an optional server workflow under exploration, and future macOS/Linux platform work.
