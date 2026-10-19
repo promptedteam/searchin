@@ -3,52 +3,127 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meet SEARCH-IN, the free Windows app for finding files, searching inside documents, and previewing results. Explore features, four quick tutorials, downloads, and our roadmap on one page.">
+  <meta name="description" content="Find files and search text inside documents with SEARCH-IN, free Windows desktop search software with local indexing, previews, and optional AI OCR.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="promptedteam">
   <meta name="theme-color" content="#f7f6f2">
-  <meta property="og:title" content="SEARCH-IN | Your files. Your words. Within reach.">
+  <meta property="og:title" content="SEARCH-IN | Free Windows File Search &amp; Document Search">
   <meta property="og:description" content="Free Windows file search, document content search, rich previews, and optional AI OCR. Find your next answer without opening every file.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://searchin.pages.dev/">
   <meta property="og:image" content="https://searchin.pages.dev/tutorials/posters/04-in-file-and-preview.jpg">
+  <meta property="og:image:alt" content="SEARCH-IN desktop search showing indexed text results and a document preview with synthetic demo files.">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:site_name" content="SEARCH-IN">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEARCH-IN | Free Windows File Search &amp; Document Search">
+  <meta name="twitter:description" content="Search filenames, find words inside indexed documents, and preview results. Free Windows software. macOS and Linux coming soon.">
+  <meta name="twitter:image" content="https://searchin.pages.dev/tutorials/posters/04-in-file-and-preview.jpg">
+  <meta name="twitter:image:alt" content="SEARCH-IN file search and embedded document preview.">
   <link rel="canonical" href="https://searchin.pages.dev/">
   <link rel="icon" href="assets/search-in-mark.png" type="image/png">
   <link rel="preload" href="assets/fonts/dm-sans.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="assets/site.css">
-  <script src="assets/theme.js"></script>
-  <script src="assets/site.js" defer></script>
-  <title>SEARCH-IN | Your files. Your words. Within reach.</title>
+  <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="alternate" type="text/plain" href="llms.txt" title="Machine-readable SEARCH-IN overview">
+  <link rel="stylesheet" href="assets/site.css?v=20261020-paper">
+  <script src="assets/theme.js?v=20261020-paper"></script>
+  <script src="assets/site.js?v=20261020-paper" defer></script>
+  <script type="application/ld+json" id="searchin-structured-data">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {"@type":"Organization","@id":"https://searchin.pages.dev/#publisher","name":"promptedteam","url":"https://github.com/promptedteam","logo":"https://searchin.pages.dev/assets/search-in-mark.png"},
+      {"@type":"WebSite","@id":"https://searchin.pages.dev/#website","name":"SEARCH-IN","alternateName":"SEARCH-IN desktop search","url":"https://searchin.pages.dev/","inLanguage":"en","publisher":{"@id":"https://searchin.pages.dev/#publisher"}},
+      {"@type":"WebPage","@id":"https://searchin.pages.dev/#webpage","url":"https://searchin.pages.dev/","name":"SEARCH-IN | Free Windows File Search & Document Search","description":"Free Windows desktop search software for filenames, indexed document text, embedded previews, and optional AI OCR.","inLanguage":"en","isPartOf":{"@id":"https://searchin.pages.dev/#website"},"about":{"@id":"https://searchin.pages.dev/#application"},"mainEntity":{"@id":"https://searchin.pages.dev/#application"},"publisher":{"@id":"https://searchin.pages.dev/#publisher"}},
+      {
+        "@type":"SoftwareApplication",
+        "@id":"https://searchin.pages.dev/#application",
+        "name":"SEARCH-IN",
+        "alternateName":"LOCALOCR",
+        "url":"https://searchin.pages.dev/",
+        "description":"Free, closed-source Windows desktop search software. Find filenames and paths, search indexed document text, preview supported files, and optionally use approved AI OCR runs for eligible files that still need text.",
+        "applicationCategory":"UtilitiesApplication",
+        "applicationSubCategory":"Desktop search and document search software",
+        "operatingSystem":"Windows 10, Windows 11",
+        "processorRequirements":"x64",
+        "softwareVersion":"2.1.0.103",
+        "softwareRequirements":"Microsoft .NET 10 Desktop Runtime (x64); Microsoft Edge WebView2 Runtime",
+        "isAccessibleForFree":true,
+        "offers":{"@type":"Offer","price":"0","priceCurrency":"USD","url":"https://searchin.pages.dev/#download","description":"The desktop application is free to use. Optional third-party AI provider usage may incur separate fees."},
+        "downloadUrl":"https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe",
+        "installUrl":"https://searchin.pages.dev/#start",
+        "releaseNotes":"https://github.com/promptedteam/searchin/releases/tag/2.1.0.103",
+        "screenshot":"https://searchin.pages.dev/tutorials/posters/04-in-file-and-preview.jpg",
+        "image":"https://searchin.pages.dev/assets/search-in-mark.png",
+        "publisher":{"@id":"https://searchin.pages.dev/#publisher"},
+        "sameAs":"https://github.com/promptedteam/searchin",
+        "featureList":["Filename and path search","Directory scope and file-type filters","Search inside locally indexed documents","Embedded document and file previews","Optional user-approved AI OCR","Encrypted provider credential storage","Multiple API keys per provider","In-app update downloads"]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://searchin.pages.dev/#questions",
+        "isPartOf":{"@id":"https://searchin.pages.dev/#webpage"},
+        "mainEntity":[
+          {"@type":"Question","name":"Is SEARCH-IN really free?","acceptedAnswer":{"@type":"Answer","text":"Yes, SEARCH-IN is free to use. It is a closed-source application, not an open-source project. Optional third-party AI providers may charge for their services or apply usage limits."}},
+          {"@type":"Question","name":"Does SEARCH-IN search the web or my computer?","acceptedAnswer":{"@type":"Answer","text":"SEARCH-IN is desktop search software for your local files. Files searches names and paths; In-File searches text prepared by the Content Indexer. It is not a web search engine or a browser extension."}},
+          {"@type":"Question","name":"Is SEARCH-IN available for macOS or Linux?","acceptedAnswer":{"@type":"Answer","text":"macOS and Linux are coming soon as planned platform directions. Only Windows 10 and Windows 11 x64 downloads are available today. There is no announced release date for either new platform."}},
+          {"@type":"Question","name":"Do I need to keep the Content Indexer open to search?","acceptedAnswer":{"@type":"Answer","text":"You need the engine running to use its search catalog. The Content Indexer prepares document text; its window does not need to stay open just to search content that has already been indexed."}}
+        ]
+      }
+    ]
+  }
+  </script>
+  <title>SEARCH-IN | Free Windows File Search &amp; Document Search</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-definitions" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.3"/><rect x="14" y="3" width="7" height="7" rx="1.3"/><rect x="3" y="14" width="7" height="7" rx="1.3"/><rect x="14" y="14" width="7" height="7" rx="1.3"/></symbol>
+    <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5Z"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M3 4h6l3 2 3-2h6v15h-6l-3 2-3-2H3Z M12 6v15"/></symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6Z M14 3v5h5 M9 12h6 M9 16h6"/></symbol>
+    <symbol id="icon-spark" viewBox="0 0 24 24"><path d="m12 3 2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4Z"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5 M4 16v5h16v-5"/></symbol>
+    <symbol id="icon-route" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="M6 7v7a5 5 0 0 0 5 5h5 M9 5h5a4 4 0 0 1 0 8h-3"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </defs></svg>
   <div class="announcement"><span class="new-label">LATEST RELEASE</span><a href="https://github.com/promptedteam/searchin/releases/tag/2.1.0.103">SEARCH-IN 2.1.0.103 <span aria-hidden="true">&rarr;</span></a><span class="announcement-note">Free to use. Built for Windows.</span></div>
   <header class="site-header">
-    <button type="button" class="menu-toggle" data-menu-toggle aria-controls="section-sidebar" aria-expanded="false" aria-label="Open section navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     <a class="brand" href="#showcase" aria-label="SEARCH-IN, back to top"><img src="assets/search-in-mark.png" width="38" height="38" alt=""><span>SEARCH-IN<span class="brand-by">by promptedteam</span></span></a>
     <nav class="header-nav" aria-label="Primary"><a href="#features">The app</a><a href="#guides">Tutorials</a><a href="#roadmap">What's next</a></nav>
     <div class="header-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme"><span aria-hidden="true">&#9680;</span></button><a class="github-link" href="https://github.com/promptedteam/searchin">GitHub <span aria-hidden="true">&#8599;</span></a><a class="button button-small" href="#download">Get SEARCH-IN <span aria-hidden="true">&darr;</span></a></div>
   </header>
+  <nav class="icon-rail" aria-label="Section menu shortcuts">
+    <button type="button" class="rail-button menu-toggle" data-menu-toggle data-tip="Open menu" aria-controls="section-sidebar" aria-expanded="false" aria-label="Open navigation"><svg aria-hidden="true"><use href="#icon-grid"/></svg></button>
+    <span class="rail-divider"></span>
+    <button type="button" class="rail-button is-active" data-menu-group="explore" data-tip="Explore" aria-controls="section-sidebar" aria-expanded="false" aria-label="Open explore menu"><svg aria-hidden="true"><use href="#icon-compass"/></svg></button>
+    <button type="button" class="rail-button" data-menu-group="learn" data-tip="Search &amp; tutorials" aria-controls="section-sidebar" aria-expanded="false" aria-label="Open search and tutorials menu"><svg aria-hidden="true"><use href="#icon-book"/></svg></button>
+    <button type="button" class="rail-button" data-menu-group="formats" data-tip="Previews" aria-controls="section-sidebar" aria-expanded="false" aria-label="Open previews menu"><svg aria-hidden="true"><use href="#icon-file"/></svg></button>
+    <button type="button" class="rail-button" data-menu-group="ai" data-tip="Optional AI" aria-controls="section-sidebar" aria-expanded="false" aria-label="Open optional AI menu"><svg aria-hidden="true"><use href="#icon-spark"/></svg></button>
+    <button type="button" class="rail-button" data-menu-group="download" data-tip="Downloads" aria-controls="section-sidebar" aria-expanded="false" aria-label="Open downloads menu"><svg aria-hidden="true"><use href="#icon-download"/></svg></button>
+    <button type="button" class="rail-button" data-menu-group="future" data-tip="What's next" aria-controls="section-sidebar" aria-expanded="false" aria-label="Open roadmap menu"><svg aria-hidden="true"><use href="#icon-route"/></svg></button>
+    <span class="rail-bottom-label" aria-hidden="true">S / IN</span>
+  </nav>
   <button type="button" class="nav-backdrop" data-menu-backdrop aria-label="Close section navigation" tabindex="-1" hidden></button>
-  <aside id="section-sidebar" class="sidebar" aria-label="On this page">
-    <div class="sidebar-mobile-heading"><strong>On this page</strong><button type="button" data-menu-close aria-label="Close section navigation">&times;</button></div>
-    <div class="sidebar-label">Explore SEARCH-IN</div>
-    <nav aria-label="Page sections">
-      <a class="side-link is-active" data-section="showcase" href="#showcase"><span aria-hidden="true">&#9638;</span> Overview</a>
-      <a class="side-link" data-section="features" href="#features"><span aria-hidden="true">&#8981;</span> What you can do</a>
-      <a class="side-link" data-section="start" href="#start"><span aria-hidden="true">&#8599;</span> Get started</a>
-      <a class="side-link" data-section="guides" href="#guides"><span aria-hidden="true">&#9655;</span> Video tutorials <span class="nav-count">04</span></a>
-      <a class="side-link" data-section="previews" href="#previews"><span aria-hidden="true">&#9707;</span> Preview formats</a>
-      <a class="side-link" data-section="ai-ocr" href="#ai-ocr"><span aria-hidden="true">+</span> Optional AI OCR</a>
-      <a class="side-link" data-section="privacy" href="#privacy"><span aria-hidden="true">&#9671;</span> Privacy &amp; control</a>
-    </nav>
-    <div class="sidebar-label">Make it yours</div>
-    <nav aria-label="Download and future plans"><a class="side-link" data-section="download" href="#download"><span aria-hidden="true">&darr;</span> Download</a><a class="side-link" data-section="questions" href="#questions"><span aria-hidden="true">?</span> Questions</a><a class="side-link" data-section="roadmap" href="#roadmap"><span aria-hidden="true">&#8605;</span> The roadmap</a></nav>
+  <aside id="section-sidebar" class="sidebar" aria-label="SEARCH-IN navigation" inert>
+    <div class="sidebar-heading"><div><strong>A little direction.</strong><span>Everything, on one page.</span></div><button type="button" data-menu-close aria-label="Close navigation"><svg aria-hidden="true"><use href="#icon-close"/></svg></button></div>
+    <div class="sidebar-label">YOUR SEARCH-IN FIELD GUIDE</div>
+    <details class="nav-group" data-group="explore" open><summary><svg aria-hidden="true"><use href="#icon-compass"/></svg> Explore <svg class="chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></summary><nav aria-label="Explore SEARCH-IN"><a class="side-link is-active" data-section="showcase" href="#showcase">Overview</a><a class="side-link" data-section="features" href="#features">What SEARCH-IN does</a><a class="side-link" data-section="privacy" href="#privacy">Privacy &amp; control</a></nav></details>
+    <details class="nav-group" data-group="learn"><summary><svg aria-hidden="true"><use href="#icon-book"/></svg> Search &amp; learn <svg class="chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></summary><nav aria-label="Learn search"><a class="side-link" data-section="search-guide" href="#search-guide">How desktop search works</a><a class="side-link" href="#filename-search">Filename vs. content search</a><a class="side-link" href="#search-scope">Choosing the right folder</a><a class="side-link" href="#searchable-scans">Searching scanned documents</a><a class="side-link" data-section="start" href="#start">Set up your first search</a></nav><details class="nav-subgroup"><summary>Four video tutorials <span>04</span></summary><nav aria-label="Video tutorial chapters"><a class="side-link" data-section="guides" href="#guides">All tutorials</a><a class="side-link" href="#01-installation-walkthrough">01 / Install SEARCH-IN</a><a class="side-link" href="#02-first-index-and-ai">02 / Index &amp; optional AI</a><a class="side-link" href="#03-files-and-folders">03 / Find files &amp; folders</a><a class="side-link" href="#04-in-file-and-preview">04 / Search inside files</a></nav></details></details>
+    <details class="nav-group" data-group="formats"><summary><svg aria-hidden="true"><use href="#icon-file"/></svg> Preview files <svg class="chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></summary><nav aria-label="File previews"><a class="side-link" data-section="previews" href="#previews">Supported preview formats</a><a class="side-link" href="#preview-limits">Compatibility &amp; limits</a></nav></details>
+    <details class="nav-group" data-group="ai"><summary><svg aria-hidden="true"><use href="#icon-spark"/></svg> Optional AI OCR <svg class="chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></summary><nav aria-label="AI OCR guidance"><a class="side-link" data-section="ai-ocr" href="#ai-ocr">Local first, AI by choice</a><a class="side-link" href="#02-first-index-and-ai">Indexer walkthrough</a></nav></details>
+    <details class="nav-group" data-group="download"><summary><svg aria-hidden="true"><use href="#icon-download"/></svg> Get the app <svg class="chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></summary><nav aria-label="Downloads and help"><a class="side-link" data-section="download" href="#download">Windows downloads</a><a class="side-link" data-section="platforms" href="#platforms">macOS &amp; Linux coming soon</a><a class="side-link" data-section="questions" href="#questions">Common questions</a></nav></details>
+    <details class="nav-group" data-group="future"><summary><svg aria-hidden="true"><use href="#icon-route"/></svg> The next chapter <svg class="chevron" aria-hidden="true"><use href="#icon-chevron"/></svg></summary><nav aria-label="Future plans"><a class="side-link" data-section="roadmap" href="#roadmap">The roadmap</a><a class="side-link" href="#platforms">Future platforms</a></nav></details>
     <div class="sidebar-note"><span class="status-dot"></span> Free, not open source.<p>The app is yours to use.<br>The source stays private.</p><a href="https://github.com/promptedteam/searchin/stargazers">Support with a star <span aria-hidden="true">&#9734;</span></a></div>
     <div class="sidebar-bottom">FORMERLY LOCALOCR<span>Same project. A clearer name.</span></div>
   </aside>
   <main id="main" class="main-content">
     <section id="showcase" class="hero section-block">
       <div class="eyebrow"><span class="tiny-cross" aria-hidden="true">+</span> A CLEARER WAY TO FIND YOUR FILES</div>
-      <div class="hero-heading"><div><h1>Your files. Your words.<br><span>All within reach.</span></h1><p class="hero-copy">Remember the filename? Search it. Remember a sentence instead? Look inside. SEARCH-IN brings file search, document text, and useful previews into one free Windows app.</p></div><div class="hero-mark" aria-hidden="true"><img src="assets/search-in-mark.png" width="106" height="106" alt=""><span>SEARCH-IN</span></div></div>
+      <div class="hero-heading"><div><h1>File search.<br><em>With the words inside.</em></h1><p class="hero-copy">Remember the filename? Search it. Remember a sentence instead? Look inside. SEARCH-IN is free Windows desktop search software that brings your files, document text, and useful previews into one considered workspace.</p></div><div class="hero-mark" aria-hidden="true"><img src="assets/search-in-mark.png" width="106" height="106" alt=""><span>SEARCH-IN</span></div></div>
       <div class="hero-actions"><a class="button" href="https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe">Download for Windows <span aria-hidden="true">&darr;</span></a><a class="text-link" href="#guides"><span class="play-circle" aria-hidden="true">&#9654;</span> Watch the app in action</a></div>
       <div class="hero-facts"><span>Free to use</span><span>Windows 10 / 11</span><span>x64</span><span>Local-first search</span></div>
       <div class="jump-grid" aria-label="Where would you like to start?"><a href="#start"><span>01</span> How do I get started? <b aria-hidden="true">&darr;</b></a><a href="#features"><span>02</span> What can SEARCH-IN do? <b aria-hidden="true">&darr;</b></a><a href="#04-in-file-and-preview"><span>03</span> How do I search inside a file? <b aria-hidden="true">&darr;</b></a><a href="#roadmap"><span>04</span> What is coming next? <b aria-hidden="true">&darr;</b></a></div>
@@ -59,6 +134,20 @@
       <div class="section-heading"><div><div class="eyebrow">ONE APP, A MORE USEFUL WORKFLOW</div><h2>Find more.<br>Open less.</h2></div><p>Go from a half-remembered name to the right document. Stay in one place while you search, narrow the results, and check the contents.</p></div>
       <div class="mode-comparison"><article><div class="mode-label"><span class="mode-dot blue"></span> FILES</div><h3>You know something<br>about the file.</h3><p>Find a name, an extension, or part of a path. Choose a directory to narrow the location, then filter the results and inspect the preview.</p><div class="example-query"><span>TRY A FILENAME</span><code>Atlas-report</code></div><ul><li>Filename and folder-path search</li><li>Directory scope and file-type filters</li><li>Live catalog updates as files change</li></ul></article><article><div class="mode-label"><span class="mode-dot green"></span> IN-FILE</div><h3>You remember what<br>the document says.</h3><p>Search the text extracted by your Content Indexer. Read the Match snippet, select a result, and navigate visible matches in the preview.</p><div class="example-query"><span>TRY A DISTINCTIVE PHRASE</span><code>delivery approved</code></div><ul><li>Search locally indexed document text</li><li>Useful snippets beside each result</li><li>Shared preview with text finding where supported</li></ul></article></div>
       <div class="detail-grid"><article><span class="detail-number">01</span><div><h3>A preview beside every search.</h3><p>Read a PDF, inspect a picture, or check a text file without repeatedly switching apps. Files and In-File use the same embedded preview pane.</p></div></article><article><span class="detail-number">02</span><div><h3>You choose the index scope.</h3><p>Use the compact Content Indexer to select folders, start or resume local extraction, and see what is searchable or still needs AI OCR.</p></div></article><article><span class="detail-number">03</span><div><h3>Results that keep moving.</h3><p>Browse progressively loaded results instead of creating millions of visible rows at once. Resize columns to make room for the information you need.</p></div></article><article><span class="detail-number">04</span><div><h3>Your place, your preferences.</h3><p>Save useful searches with bookmarks. Follow your device theme automatically, or choose Light or Dark yourself.</p></div></article><article><span class="detail-number">05</span><div><h3>AI only when you want it.</h3><p>Run local extraction first. Optional AI OCR targets eligible files that still need text, using a provider you choose and a run you approve.</p></div></article><article><span class="detail-number">06</span><div><h3>Quiet, in-app updates.</h3><p>A download indicator tells you when an update is available. Review it, download inside the app, and choose when to run the installer.</p></div></article></div>
+    </section>
+    <section id="search-guide" class="section-block field-guide">
+      <div class="section-heading"><div><div class="eyebrow">NOTES FROM THE DESKTOP</div><h2>A field guide<br>to finding things.</h2></div><p>A good search starts with the right question. Here is how filename search, document indexing, and OCR fit together, without the jargon.</p></div>
+      <div class="paper-sheet">
+        <div class="paper-heading"><span>SEARCH-IN JOURNAL / 01</span><span>THE EVERYDAY SEARCH</span></div>
+        <p class="paper-intro">Desktop search is a way to find information in files on your own computer. The useful part is not just getting a list. It is knowing which result deserves your attention.</p>
+        <article id="filename-search" class="field-note"><span class="field-number">01</span><div><h3>Start with what you remember.</h3><p>If you remember a name, extension, or folder, start in <strong>Files</strong>. A filename search answers, "Where is that file?" It can locate a PDF by its name without reading the PDF's contents.</p><p>If you remember the words in the document instead, use <strong>In-File</strong>. Content search answers, "Which indexed document contains this text?" A distinctive phrase is often more useful than a common word that appears in hundreds of files.</p><div class="search-example"><span>NAME YOU REMEMBER</span><code>Atlas-report</code><span>WORDS YOU REMEMBER</span><code>delivery approved</code></div></div></article>
+        <article id="search-scope" class="field-note"><span class="field-number">02</span><div><h3>Give your search a place to begin.</h3><p>When you know the project or folder, narrow the directory scope. Searching the right location can make a busy result list much easier to read. Use a file-type filter when you know you need a PDF, a picture, or another specific format.</p><p>The filename catalog and the document-content index have different scopes. Finding a filename does not prove its contents have been indexed. For In-File, check that the document is inside your chosen Content Indexer folders and that local extraction has finished.</p></div></article>
+        <article id="searchable-scans" class="field-note"><span class="field-number">03</span><div><h3>A scan is a picture until its words are read.</h3><p>A PDF can contain selectable text, scanned page images, or both. Searching a filename cannot reveal the words in an image. OCR, or optical character recognition, is the step that turns visible lettering into searchable text.</p><p>SEARCH-IN extracts available document text locally first. Eligible files that still need text can enter AI Pending. Optional AI OCR is a separate choice: configure a supported vision provider, review what needs processing, and approve the run. Provider fees and privacy terms are separate from the free desktop app.</p></div></article>
+        <article class="field-note"><span class="field-number">04</span><div><h3>Read the result before opening another app.</h3><p>A Match snippet gives you a little context, not the whole story. Check the filename, path, and available file details, then use the embedded preview to see whether it is the right document. Where rendered text is available, move between visible matches or browse the relevant pages.</p><p>A preview is for quick inspection. Complex document layouts and specialist formats may look different from their native editor. When exact formatting matters, open the original file in its normal application.</p></div></article>
+        <dl class="search-glossary"><div><dt>Catalog</dt><dd>The file names and paths the engine can search.</dd></div><div><dt>Content index</dt><dd>Document text prepared for In-File search.</dd></div><div><dt>OCR</dt><dd>Reading lettering from scans or images into text.</dd></div></dl>
+        <details class="search-answer"><summary>Does SEARCH-IN search the web or my computer?</summary><p>SEARCH-IN is desktop search software for your local files. Files searches names and paths; In-File searches text prepared by the Content Indexer. It is not a web search engine or a browser extension.</p></details>
+        <p class="paper-endnote">One helpful distinction: optional AI OCR reads eligible files you approve. It does not mean every search is sent to an AI model, or that a whole-PC search is an unrestricted AI chat with all your files.</p>
+      </div>
     </section>
     <section id="start" class="section-block">
       <div class="section-heading"><div><div class="eyebrow">START SMALL. GO DEEPER.</div><h2>Your first search,<br>step by step.</h2></div><p>Filename search and document-text search are different jobs. Here is when you need the engine, the indexer, and optional AI.</p></div>
@@ -78,13 +167,18 @@
       <div class="section-heading"><div><div class="eyebrow">KNOW WHAT YOU FOUND</div><h2>A whole lot of formats.<br>One familiar preview.</h2></div><p>Get the context beside your results. Read a page, inspect an image, check an archive, or play supported media without leaving the search.</p></div>
       <div class="format-filters" role="group" aria-label="Filter preview categories"><button type="button" class="filter-button is-active" aria-pressed="true" data-filter="all">All formats</button><button type="button" class="filter-button" aria-pressed="false" data-filter="documents">Documents</button><button type="button" class="filter-button" aria-pressed="false" data-filter="visual">Visual</button><button type="button" class="filter-button" aria-pressed="false" data-filter="developer">Text &amp; code</button><button type="button" class="filter-button" aria-pressed="false" data-filter="media">Media &amp; more</button></div><p id="format-status" class="sr-only" aria-live="polite">Showing all 8 preview categories.</p>
       <div class="format-grid"><article class="format-card" data-category="documents"><span class="format-glyph" aria-hidden="true">Aa</span><div><h3>Documents</h3><p>PDF pages and find controls, approximate Word page layouts, formatted RTF, and basic spreadsheet values and slide text.</p><div class="format-types">PDF / DOCX / DOCM / RTF / XLSX / PPTX</div></div></article><article class="format-card" data-category="visual"><span class="format-glyph" aria-hidden="true">&#9707;</span><div><h3>Images &amp; design</h3><p>Everyday images, GIF/APNG animation, supported PSD composites, and PDF-compatible Illustrator content.</p><div class="format-types">JPG / PNG / WEBP / AVIF / SVG / PSD / AI</div></div></article><article class="format-card" data-category="developer"><span class="format-glyph" aria-hidden="true">&lt;/&gt;</span><div><h3>Text &amp; code</h3><p>Readable text and syntax-highlighted code/configuration, rendered Markdown, and text-based subtitle files.</p><div class="format-types">TXT / MD / JSON / JS / PY / SRT / ASS / VTT</div></div></article><article class="format-card" data-category="media"><span class="format-glyph" aria-hidden="true">&#9655;</span><div><h3>Video &amp; audio</h3><p>Play supported audio and video in place. Actual container and codec support depends on Windows and WebView2.</p><div class="format-types">MP4 / WEBM / MOV / MP3 / FLAC / WAV</div></div></article><article class="format-card" data-category="developer"><span class="format-glyph" aria-hidden="true">&#9636;</span><div><h3>Archives &amp; binary</h3><p>See archive metadata and entry names without extraction. Inspect a read-only hex and ASCII view of binary files.</p><div class="format-types">ZIP / RAR / 7Z / TAR / GZIP / BIN / DLL</div></div></article><article class="format-card" data-category="documents"><span class="format-glyph" aria-hidden="true">&#9703;</span><div><h3>E-books &amp; comics</h3><p>Read supported EPUB chapters and embedded images. Browse image pages in supported comic-book archives.</p><div class="format-types">EPUB / CBZ / CBR</div></div></article><article class="format-card" data-category="visual"><span class="format-glyph" aria-hidden="true">&#9671;</span><div><h3>3D models</h3><p>Inspect supported geometry with orbit and zoom. External materials and textures are not loaded.</p><div class="format-types">OBJ / STL / FBX</div></div></article><article class="format-card" data-category="media"><span class="format-glyph" aria-hidden="true">Ag</span><div><h3>Fonts &amp; sheet music</h3><p>See font specimens without installing fonts, or read supported MusicXML and compressed MXL scores.</p><div class="format-types">TTF / OTF / WOFF / WOFF2 / MUSICXML / MXL</div></div></article></div>
-      <details class="format-limits"><summary>A useful preview, with honest limits.</summary><p>Complex Word layout is approximate. Excel previews show stored worksheet values, not a complete Excel environment. PowerPoint previews show basic slide text, not full presentations. Scans need OCR for text searching. Media codecs vary between PCs.</p><p>RAW, HEIC, TIFF, EPS, MOBI/AZW, and legacy Office renderers are not bundled. Installed Windows preview handlers may offer additional compatibility, but the full QuickLook plugin ecosystem is not included.</p></details>
+      <details id="preview-limits" class="format-limits"><summary>A useful preview, with honest limits.</summary><p>Complex Word layout is approximate. Excel previews show stored worksheet values, not a complete Excel environment. PowerPoint previews show basic slide text, not full presentations. Scans need OCR for text searching. Media codecs vary between PCs.</p><p>RAW, HEIC, TIFF, EPS, MOBI/AZW, and legacy Office renderers are not bundled. Installed Windows preview handlers may offer additional compatibility, but the full QuickLook plugin ecosystem is not included.</p></details>
     </section>
     <section id="ai-ocr" class="section-block">
       <div class="section-heading"><div><div class="eyebrow">OPTIONAL. DELIBERATE. IN YOUR CONTROL.</div><h2>Local text first.<br>AI when you need it.</h2></div><p>A readable document does not need an AI call just to become searchable. Start locally, then decide whether the remaining files need help.</p></div>
       <div class="ai-flow"><div><span>01 / EXTRACT</span><h3>Read locally.</h3><p>Run the Content Indexer over your chosen folders. Documents with accessible text become searchable without an AI provider.</p></div><div><span>02 / REVIEW</span><h3>Check AI Pending.</h3><p>Review eligible files that still need text, such as scans. A pending count is an invitation to decide, not an automatic upload.</p></div><div><span>03 / APPROVE</span><h3>Choose your provider.</h3><p>Configure a supported vision provider and approve the AI run. Only then are eligible files sent to that provider for processing.</p></div></div>
       <div class="ai-details"><div><h3>Your provider. Your keys.</h3><p>Manage provider credentials in the app. Multiple keys can be saved per provider, rotated on rate limits, and paused until a cooling-down key is available again.</p></div><div><h3>Free app. Separate AI costs.</h3><p>SEARCH-IN is free to use. External AI providers have their own pricing, free allowances, rate limits, and privacy terms. A free allowance is not a promise of unlimited OCR.</p></div></div>
       <a class="text-link" href="#02-first-index-and-ai">See the indexer and optional AI walkthrough <span aria-hidden="true">&rarr;</span></a>
+    </section>
+    <section id="platforms" class="section-block">
+      <div class="section-heading"><div><div class="eyebrow">TODAY, AND THE NEXT CHAPTER</div><h2>Windows, today.<br>More desktops, ahead.</h2></div><p>Start with the Windows app available now. macOS and Linux are planned next chapters, not downloads we are pretending are ready.</p></div>
+      <div class="platform-grid"><article class="platform-card available"><span class="platform-monogram" aria-hidden="true">W</span><span class="platform-state">AVAILABLE NOW</span><h3>Windows</h3><p>Windows 10 and Windows 11, x64. Setup and Portable ZIP are available.</p><a class="text-link" href="#download">Get the Windows app <span aria-hidden="true">&darr;</span></a></article><article class="platform-card"><span class="platform-monogram" aria-hidden="true">M</span><span class="platform-state">COMING SOON</span><h3>macOS</h3><p>A planned platform direction. No public macOS build or release date has been announced.</p><a class="text-link" href="#roadmap">Follow the roadmap <span aria-hidden="true">&rarr;</span></a></article><article class="platform-card"><span class="platform-monogram" aria-hidden="true">L</span><span class="platform-state">COMING SOON</span><h3>Linux</h3><p>A planned platform direction. No public Linux build or release date has been announced.</p><a class="text-link" href="#roadmap">Follow the roadmap <span aria-hidden="true">&rarr;</span></a></article></div>
+      <details class="format-limits"><summary>Is SEARCH-IN available for macOS or Linux?</summary><p>macOS and Linux are coming soon as planned platform directions. Only Windows 10 and Windows 11 x64 downloads are available today. There is no announced release date for either new platform.</p></details>
     </section>
     <section id="privacy" class="section-block">
       <div class="section-heading"><div><div class="eyebrow">YOUR DESKTOP IS YOUR SPACE</div><h2>Useful search.<br>Clear boundaries.</h2></div><p>You should know where the work happens, what is optional, and what this public project does and does not contain.</p></div>

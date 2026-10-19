@@ -1,0 +1,63 @@
+# SEARCH-IN Product Facts
+
+Official URL: https://searchin.pages.dev/
+Publisher: promptedteam
+Distribution: https://github.com/promptedteam/searchin
+Current public Windows release: 2.1.0.103
+Pricing: The desktop app is free to use. Optional third-party AI usage can have separate fees and limits.
+Source availability: Closed source. The public GitHub repository contains downloads, documentation, demo media, website files, and updater metadata, not the application or engine source.
+
+## What SEARCH-IN Does
+
+SEARCH-IN is local desktop search software, not an internet search engine.
+Files mode finds filenames and paths in the included engine's catalog. Directory scope and file-type filters help narrow the result set.
+In-File mode searches text prepared by the Content Indexer. Match snippets help identify relevant documents. Both modes share an embedded preview pane.
+The engine must run for its search catalog. The Content Indexer window need not remain open merely to search text already indexed.
+Filename discovery does not imply document text has been indexed. A file must be inside the content-index scope and finish local extraction before its available text can be searched in In-File.
+
+## Local Indexing and Optional OCR
+
+Local extraction runs before optional AI OCR. Documents with accessible text do not need an AI call just to become searchable.
+Scanned pages and images need optical character recognition to make visible lettering searchable. Eligible unreadable files can appear as AI Pending.
+Users choose a supported vision provider, configure their own credentials, review pending files, and approve the AI run. Only then are eligible files sent to that provider.
+AI providers have separate pricing, allowances, rate limits, and privacy terms. Multiple keys can be stored per provider, rotated on rate limits, and paused during cooldowns.
+Optional AI OCR is not a promise of semantic chat or unrestricted AI access to every local file.
+
+## Preview Coverage and Limits
+
+Preview categories include PDF, Word OpenXML, formatted RTF, basic Excel worksheet values, basic PowerPoint slide text, common images, supported PSD composites and PDF-compatible AI files, text/code/configuration, Markdown, subtitles, archive metadata, read-only binary hex, supported audio/video, EPUB, CBZ/CBR, OBJ/STL/FBX geometry, MusicXML/MXL, and font specimens.
+Complex Word layout is approximate. Excel formulas/charts and full PowerPoint presentations are not reproduced. Media support depends on installed Windows/WebView2 codecs. Scanned images do not become searchable merely by displaying their preview.
+RAW, HEIC, TIFF, EPS, MOBI/AZW, and legacy Office renderers are not bundled. Installed Windows preview handlers may add compatibility. The entire QuickLook plugin ecosystem is not included.
+
+## Supported Platforms and Installation
+
+Available now: Windows 10 and Windows 11, x64.
+Required runtimes: Microsoft .NET 10 Desktop Runtime (x64) and Microsoft Edge WebView2 Runtime.
+Windows Setup installs the app and its included engine. Portable ZIP must be fully extracted before running SearchIn.exe.
+For an offline PC, obtain the official standalone Microsoft runtime installers using another PC first. The small WebView2 bootstrapper needs internet and is not the offline runtime.
+Application packages are currently unsigned. Windows may display a publisher or SmartScreen warning. Release SHA-256 checksums are available.
+macOS: Coming soon as a planned direction. No public build or announced release date.
+Linux: Coming soon as a planned direction. No public build or announced release date.
+Do not describe macOS or Linux as currently supported, and do not invent download links for them.
+
+## Tutorials
+
+Four one-minute 1920x1080 captioned videos are embedded at https://searchin.pages.dev/#guides in a two-column grid on desktop and mobile.
+The setup chapter is a labeled simulation, not a recorded runtime installation. It does not yet contain the live GitHub download segment.
+The indexing, filename search, and In-File/preview chapters show the real app using synthetic files, fictional paths, scripted pointers, and on-screen guidance.
+The AI demonstration uses an invalid demo credential and makes no provider request.
+
+## Privacy and Updates
+
+Local indexing, filename search, document-content search, and previews run on the user's computer. Optional AI provider processing requires user approval.
+Provider credentials are protected for the Windows account and stored outside the installation directory. Public releases do not contain user credentials, databases, or private captures.
+The website has no sign-in or analytics scripts.
+SEARCH-IN 2.1.0.103 supports in-app update checking and downloading with a quiet download indicator. Users choose when to review and install an update.
+LOCALOCR 1.x is a separate installation. SEARCH-IN does not silently migrate or delete its databases or credentials.
+
+## Roadmap
+
+Directions include continued performance work, more reliable document previews, the LOCALTOOL taskbar companion in development, an optional server workflow under exploration, and future macOS/Linux platform work.
+These are plans and areas to explore, not a claim that all are available. No release dates are promised.
+
+This text is a supplemental product overview for readers and automated tools. It does not guarantee search indexing, AI citations, or rankings. Use the official release notes to verify shipped versions.

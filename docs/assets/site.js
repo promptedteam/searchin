@@ -124,43 +124,74 @@
   const toggle = document.querySelector('[data-menu-toggle]');
   const backdrop = document.querySelector('[data-menu-backdrop]');
   const close = document.querySelector('[data-menu-close]');
-  const mobile = matchMedia('(max-width: 950px)');
   const main = document.querySelector('main');
+  const groupButtons = [...document.querySelectorAll('[data-menu-group]')];
+  const groups = [...document.querySelectorAll('.nav-group[data-group]')];
   let returnFocus;
-  function setMenu(open, restoreFocus = true) {
-    const expanded = open && mobile.matches;
+  let currentSectionGroup = 'explore';
+  let selectedGroup = 'explore';
+  function updateRail(group) {
+    groupButtons.forEach(button => {
+      button.classList.toggle('is-active', button.dataset.menuGroup === group);
+      button.setAttribute('aria-expanded', String(document.body.classList.contains('nav-open') && button.dataset.menuGroup === group));
+    });
+  }
+  function setMenu(expanded, restoreFocus = true, trigger) {
     document.body.classList.toggle('nav-open', expanded);
     toggle?.setAttribute('aria-expanded', String(expanded));
+    toggle?.setAttribute('aria-label', expanded ? 'Close navigation' : 'Open navigation');
     if (backdrop) backdrop.hidden = !expanded;
     if (main) main.inert = expanded;
     if (sidebar) {
+      sidebar.inert = !expanded;
       if (expanded) {
         sidebar.setAttribute('role', 'dialog');
         sidebar.setAttribute('aria-modal', 'true');
-        returnFocus = document.activeElement;
+        returnFocus = trigger || document.activeElement;
         requestAnimationFrame(() => {
-          if (document.body.classList.contains('nav-open')) close?.focus();
+          if (!document.body.classList.contains('nav-open')) return;
+          const target = trigger?.hasAttribute('data-menu-group')
+            ? groups.find(group => group.dataset.group === selectedGroup)?.querySelector('summary')
+            : close;
+          target?.focus();
         });
       } else {
         sidebar.removeAttribute('role');
         sidebar.removeAttribute('aria-modal');
-        if (restoreFocus && returnFocus && mobile.matches) returnFocus.focus();
+        if (restoreFocus && returnFocus) returnFocus.focus();
       }
     }
+    updateRail(expanded ? selectedGroup : currentSectionGroup);
   }
-  toggle?.addEventListener('click', () => setMenu(!document.body.classList.contains('nav-open')));
+  function openGroup(name, trigger) {
+    selectedGroup = name;
+    groups.forEach(group => { group.open = group.dataset.group === name; });
+    setMenu(true, true, trigger);
+  }
+  toggle?.addEventListener('click', () => {
+    if (document.body.classList.contains('nav-open')) setMenu(false);
+    else openGroup(currentSectionGroup, toggle);
+  });
+  groupButtons.forEach(button => button.addEventListener('click', () => {
+    if (document.body.classList.contains('nav-open') && selectedGroup === button.dataset.menuGroup) setMenu(false);
+    else openGroup(button.dataset.menuGroup, button);
+  }));
   close?.addEventListener('click', () => setMenu(false));
   backdrop?.addEventListener('click', () => setMenu(false));
   sidebar?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    setMenu(false);
-    if (link.hash) document.querySelector(link.hash)?.setAttribute('tabindex', '-1');
+    setMenu(false, false);
+    const target = link.hash ? document.getElementById(decodeURIComponent(link.hash.slice(1))) : null;
+    if (target) {
+      target.setAttribute('tabindex', '-1');
+      if (target.tagName === 'DETAILS') target.open = true;
+      requestAnimationFrame(() => target.focus({ preventScroll: true }));
+    }
   }));
-  mobile.addEventListener('change', () => setMenu(false, false));
   document.addEventListener('keydown', event => {
     if (!document.body.classList.contains('nav-open')) return;
     if (event.key === 'Escape') { event.preventDefault(); setMenu(false); }
     if (event.key === 'Tab') {
-      const items = [...sidebar.querySelectorAll('a[href], button')].filter(item => item.getClientRects().length);
+      const items = [...sidebar.querySelectorAll('a[href], button, summary')].filter(item => item.getClientRects().length);
       const first = items[0];
       const last = items.at(-1);
       if (!sidebar.contains(document.activeElement)) {
@@ -182,7 +213,9 @@
           link.classList.toggle('is-active', active);
           if (active) link.setAttribute('aria-current', 'location');
           else link.removeAttribute('aria-current');
+          if (active) currentSectionGroup = link.closest('[data-group]')?.dataset.group || 'explore';
         });
+        if (!document.body.classList.contains('nav-open')) updateRail(currentSectionGroup);
       });
     }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
     document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
