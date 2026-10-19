@@ -8,14 +8,14 @@
 
 **Formerly LOCALOCR. The same project, a new name, and a new preview experience.**
 
-[![Latest release](https://img.shields.io/github/v/release/promptedteam/LOCALOCR?display_name=tag&style=flat-square&color=1687ff)](https://github.com/promptedteam/LOCALOCR/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/promptedteam/LOCALOCR/total?style=flat-square&color=1687ff)](https://github.com/promptedteam/LOCALOCR/releases)
+[![Latest release](https://img.shields.io/github/v/release/promptedteam/searchin?display_name=tag&style=flat-square&color=1687ff)](https://github.com/promptedteam/searchin/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/promptedteam/searchin/total?style=flat-square&color=1687ff)](https://github.com/promptedteam/searchin/releases)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-1687ff?style=flat-square)
 ![Architecture](https://img.shields.io/badge/Architecture-x64-273142?style=flat-square)
 
-[Download Setup](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) &middot; [Download Portable](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-portable.zip) &middot; [Release notes](https://github.com/promptedteam/LOCALOCR/releases/tag/2.1.0.103)
+[Download Setup](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) &middot; [Download Portable](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-portable.zip) &middot; [Release notes](https://github.com/promptedteam/searchin/releases/tag/2.1.0.103)
 
-<a href="https://github.com/promptedteam/LOCALOCR/stargazers"><img alt="Star SEARCH-IN on GitHub" src="https://img.shields.io/github/stars/promptedteam/LOCALOCR?style=for-the-badge&logo=github&label=STAR%20SEARCH-IN&color=20a464&labelColor=1b2430&cacheSeconds=300"></a>
+<a href="https://github.com/promptedteam/searchin/stargazers"><img alt="Star SEARCH-IN on GitHub" src="https://img.shields.io/github/stars/promptedteam/searchin?style=for-the-badge&logo=github&label=STAR%20SEARCH-IN&color=20a464&labelColor=1b2430&cacheSeconds=300"></a>
 
 </div>
 
@@ -41,7 +41,7 @@ SEARCH-IN is independent software. It does not require Everything, EverythingToo
 
 ## Four One-Minute Guides
 
-**Play the videos directly below, inside GitHub.** Use each player's full-screen button for the clearest application text. No download is needed. An optional [larger gallery with captions](https://promptedteam.github.io/LOCALOCR/tutorials/) is also available.
+**Play the videos directly below, inside GitHub.** Use each player's full-screen button for the clearest application text. No download is needed. An optional [larger gallery with captions](https://promptedteam.github.io/searchin/tutorials/) is also available.
 
 <table>
 <tr>
@@ -92,8 +92,8 @@ The app demonstrations use synthetic files and fictional `C:\Demo` paths. No per
 
 | Package | Best for |
 | --- | --- |
-| [**Setup**](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) | Recommended. Installs SEARCH-IN and its engine service, adds shortcuts, and supports future SEARCH-IN updates. |
-| [**Portable ZIP**](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-portable.zip) | Extract the complete ZIP before running `SearchIn.exe`. `Preview-Samples.cmd` opens synthetic samples without a PC-wide index. |
+| [**Setup**](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) | Recommended. Installs SEARCH-IN and its engine service, adds shortcuts, and supports future SEARCH-IN updates. |
+| [**Portable ZIP**](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-portable.zip) | Extract the complete ZIP before running `SearchIn.exe`. `Preview-Samples.cmd` opens synthetic samples without a PC-wide index. |
 
 **Requirements:** Windows 10 or 11, x64; Microsoft .NET 10 Desktop Runtime (x64); Microsoft Edge WebView2 Runtime. Setup checks the prerequisites and can obtain missing components from Microsoft with internet access. The engine does not require a separate Visual C++ redistributable.
 
@@ -105,7 +105,7 @@ The app demonstrations use synthetic files and fictional `C:\Demo` paths. No per
 
 Install `2.1.0.103` once if you used an earlier local SEARCH-IN test build: those builds deliberately disabled online update checks. Future published SEARCH-IN updates use the in-app downloader. Existing SEARCH-IN configuration, encrypted keys, bookmarks, and indexes remain in their existing locations.
 
-LOCALOCR 1.x remains a separate installation. This release does not silently convert or delete its databases or credentials. Its old update feed remains valid. The repository URL is retained so existing links, releases, stars, and update channels keep working.
+LOCALOCR 1.x remains a separate installation. This release does not silently convert or delete its databases or credentials. Its old update feed remains valid. The repository is now `promptedteam/searchin`; GitHub redirects the former `promptedteam/LOCALOCR` repository links. Releases, stars, and inline videos are retained.
 
 ## Preview Coverage
 
@@ -122,7 +122,7 @@ Word layout is approximate; advanced Office features, media codecs, and speciali
 
 Local indexing and previews stay on the computer. Optional AI OCR sends files only after you choose a provider and confirm a run. API credentials are protected for the current Windows account, stored outside the installation folder, and excluded from releases. See [AI OCR](docs/AI-OCR.md), [Privacy](PRIVACY.md), and [Security](SECURITY.md).
 
-Compare downloaded files with [SHA256SUMS.txt](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SHA256SUMS.txt):
+Compare downloaded files with [SHA256SUMS.txt](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SHA256SUMS.txt):
 
 The application packages are not currently code-signed. Windows may show a publisher or SmartScreen warning; verify the release source and checksum before installing.
 
