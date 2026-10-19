@@ -15,6 +15,8 @@
 
 [Download Setup](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) &middot; [Download Portable](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-portable.zip) &middot; [Release notes](https://github.com/promptedteam/searchin/releases/tag/2.1.0.103)
 
+[Explore the app](https://promptedteam.github.io/searchin/) &middot; [Learning hub](https://promptedteam.github.io/searchin/tutorials/)
+
 <a href="https://github.com/promptedteam/searchin/stargazers"><img alt="Star SEARCH-IN on GitHub" src="https://img.shields.io/github/stars/promptedteam/searchin?style=for-the-badge&logo=github&label=STAR%20SEARCH-IN&color=20a464&labelColor=1b2430&cacheSeconds=300"></a>
 
 </div>
