@@ -1,0 +1,2 @@
+# Preserve the byte-identical, checksum-verified tutorial archive contents.
+docs/tutorials/** -text

@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.876
+Files searches names and paths
+
+00:00:01.876 --> 00:00:09.999
+Type part of a filename
+
+00:00:09.999 --> 00:00:16.419
+Or narrow by extension: .pdf
+
+00:00:16.419 --> 00:00:22.473
+Select once to preview the file
+
+00:00:22.473 --> 00:00:27.991
+Filters can restrict the file type
+
+00:00:27.991 --> 00:00:33.145
+File > Open Directory limits the search location
+
+00:00:33.145 --> 00:00:38.998
+This is a fictional demo folder
+
+00:00:38.998 --> 00:00:43.983
+Clear restores the broader search scope
+
+00:00:43.983 --> 00:00:50.998
+Match Path includes folder names in the search
+
+00:00:50.998 --> 00:00:57.766
+Scroll results without opening each file
+
+00:00:57.766 --> 00:01:00.000
+Preview first; open only the file you need

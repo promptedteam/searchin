@@ -1,0 +1,11 @@
+Install SEARCH-IN
+
+00s  Setup walkthrough: prepare a new PC
+05s  Missing .NET? Choose Download
+13s  Then Install the Desktop Runtime
+18s  Offline PC? Bring both Microsoft runtime installers first.
+22s  Continue when the runtime is ready
+27s  Install WebView2 for the new previewer
+38s  Next: choose where SEARCH-IN is installed
+45s  Install SEARCH-IN after both prerequisites
+53s  Finish, then open the Content Indexer

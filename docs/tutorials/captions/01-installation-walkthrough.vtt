@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.006
+Setup walkthrough: prepare a new PC
+
+00:00:05.006 --> 00:00:13.005
+Missing .NET? Choose Download
+
+00:00:13.005 --> 00:00:18.156
+Then Install the Desktop Runtime
+
+00:00:18.156 --> 00:00:22.994
+Offline PC? Bring both Microsoft runtime installers first.
+
+00:00:22.994 --> 00:00:27.982
+Continue when the runtime is ready
+
+00:00:27.982 --> 00:00:38.998
+Install WebView2 for the new previewer
+
+00:00:38.998 --> 00:00:45.002
+Next: choose where SEARCH-IN is installed
+
+00:00:45.002 --> 00:00:53.997
+Install SEARCH-IN after both prerequisites
+
+00:00:53.997 --> 00:01:00.000
+Finish, then open the Content Indexer

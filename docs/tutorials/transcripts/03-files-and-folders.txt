@@ -1,0 +1,13 @@
+Find files and choose folders
+
+00s  Files searches names and paths
+01s  Type part of a filename
+09s  Or narrow by extension: .pdf
+16s  Select once to preview the file
+22s  Filters can restrict the file type
+27s  File > Open Directory limits the search location
+33s  This is a fictional demo folder
+38s  Clear restores the broader search scope
+43s  Match Path includes folder names in the search
+50s  Scroll results without opening each file
+57s  Preview first; open only the file you need

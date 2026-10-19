@@ -2,11 +2,12 @@
 
 ## Supported version
 
-Security corrections are provided for the latest LOCALOCR release.
+Security corrections are provided for the latest public SEARCH-IN release.
 
 | Version | Supported |
 | --- | --- |
-| 1.5.1.100 | Yes |
+| 2.1.0.103 | Current |
+| LOCALOCR 1.x | Legacy, separate update channel |
 | Earlier builds | Update recommended |
 
 ## Reporting a vulnerability

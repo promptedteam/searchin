@@ -1,0 +1,5 @@
+main{max-width:1520px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+main>:not(section){grid-column:1/-1}section{margin:0;min-width:0;align-self:start}
+section header{min-height:172px;padding:24px 22px;gap:14px}h2{font-size:26px}.number{font-size:36px}
+section footer{padding:18px 22px;gap:16px}section details{flex-basis:100%}.facts{margin:8px 0 12px}
+.bottom{margin-top:18px}@media(max-width:900px){main{grid-template-columns:minmax(0,1fr)}section header{min-height:0}}

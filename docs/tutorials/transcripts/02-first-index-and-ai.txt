@@ -1,0 +1,13 @@
+First index and optional AI
+
+00s  Build the content index before In-File search
+03s  Tools > Open Content Indexer
+07s  Check the folder. Change selects another scope.
+12s  Start: extract text locally first
+19s  Searchable and AI Pending update as files are read
+29s  Only files still needing text enter AI Pending
+36s  Optional: choose a vision-capable AI provider
+40s  Add your own API key. This demo key is invalid.
+43s  Add key
+48s  Save stores encrypted credentials locally
+53s  AI OCR sends pending files only after your approval

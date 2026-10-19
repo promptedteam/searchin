@@ -1,0 +1,30 @@
+SEARCH-IN / FOUR ONE-MINUTE GUIDES
+
+Open index.html for the local video gallery, or play the four MP4 files in videos/.
+Each video is exactly 60 seconds, 1920 x 1080, H.264, 30 fps. No audio is included.
+English pointers and callouts are burned into the video; SRT/VTT and text steps are included.
+
+01 Install SEARCH-IN: clearly labeled installation walkthrough for the upcoming release.
+   Runtime states and progress are demonstrated; nothing was installed during capture.
+   A PC without the Microsoft .NET 10 Desktop Runtime (x64) and WebView2 must install both.
+   For an offline PC, download the official standalone installers on another PC first.
+   The small WebView2 bootstrapper itself requires internet access.
+   The real GitHub download segment is pending publication and will be added afterward.
+02 First index and optional AI: local extraction first, pending counts, AI settings and Save.
+   Only an invalid demonstration key is used. No file is uploaded and no AI request is made.
+03 Find files and choose folders: filename, extension filter, directory scope, path matching, scrolling.
+04 Search inside files: indexed text, Match snippets, embedded PDF match navigation and text preview.
+
+SOURCE AND PRIVACY
+The three app chapters are continuously recorded from the real app's live window texture,
+not assembled from screenshots. Their isolated application process uses synthetic files.
+The moving pointer and control callouts are scripted overlays for clarity.
+Capture is restricted by native code to a window owned by that recording process.
+No display/desktop capture, production profile, personal files or working API keys are included.
+The generic Windows 11 backdrop is drawn inside the recording window for small dialogs only.
+Native 1080p was used because the available displays do not support native 2K capture.
+Review includes full video decoding, timing checks, visual spot checks, and local OCR of
+one decoded frame each second. OCR is supplemental and is not a proof for every pixel.
+
+Prepared for distribution with SEARCH-IN. The setup chapter remains a labeled walkthrough.
+Only the four videos, posters, captions, text guides, manifest and checksums are packaged.

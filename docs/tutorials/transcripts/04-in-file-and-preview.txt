@@ -1,0 +1,11 @@
+Search inside files and navigate matches
+
+00s  In-File searches indexed document text
+03s  Type text that appears inside the document
+10s  Read Match snippets to identify the right result
+19s  The preview highlights visible matches
+26s  Use the find arrows to move between matches
+37s  Scroll or change pages without opening the source
+43s  Use a distinctive phrase for fewer results
+52s  Text and documents share the same preview pane
+56s  Files finds the name. In-File finds the content.

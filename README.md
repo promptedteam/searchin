@@ -1,91 +1,143 @@
 <div align="center">
 
-# LOCALOCR
+<img src="docs/images/search-in.png" alt="SEARCH-IN" width="100">
+
+# SEARCH-IN
 
 ### Fast Windows file search, local content discovery, and optional AI OCR
+
+**Formerly LOCALOCR. The same project, a new name, and a new preview experience.**
 
 [![Latest release](https://img.shields.io/github/v/release/promptedteam/LOCALOCR?display_name=tag&style=flat-square&color=1687ff)](https://github.com/promptedteam/LOCALOCR/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/promptedteam/LOCALOCR/total?style=flat-square&color=1687ff)](https://github.com/promptedteam/LOCALOCR/releases)
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-1687ff?style=flat-square)
 ![Architecture](https://img.shields.io/badge/Architecture-x64-273142?style=flat-square)
 
-[Download Setup](https://github.com/promptedteam/LOCALOCR/releases/download/1.5.3.100/LOCALOCR-1.5.3.100-Setup.exe) · [Download Portable](https://github.com/promptedteam/LOCALOCR/releases/download/1.5.3.100/LOCALOCR-1.5.3.100-portable.zip) · [Release notes](https://github.com/promptedteam/LOCALOCR/releases/tag/1.5.3.100)
+[Download Setup](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) &middot; [Download Portable](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-portable.zip) &middot; [Release notes](https://github.com/promptedteam/LOCALOCR/releases/tag/2.1.0.103)
 
-<a href="https://github.com/promptedteam/LOCALOCR/stargazers">
-  <img alt="Star LOCALOCR on GitHub" src="https://img.shields.io/github/stars/promptedteam/LOCALOCR?style=for-the-badge&logo=github&label=STAR%20LOCALOCR&color=20a464&labelColor=1b2430&cacheSeconds=300">
-</a>
+<a href="https://github.com/promptedteam/LOCALOCR/stargazers"><img alt="Star SEARCH-IN on GitHub" src="https://img.shields.io/github/stars/promptedteam/LOCALOCR?style=for-the-badge&logo=github&label=STAR%20SEARCH-IN&color=20a464&labelColor=1b2430&cacheSeconds=300"></a>
 
 </div>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/localocr-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="docs/images/localocr-light.png">
-  <img alt="LOCALOCR file search with live preview" src="docs/images/localocr-light.png">
-</picture>
+![SEARCH-IN document search and embedded preview with synthetic demo files](docs/tutorials/posters/04-in-file-and-preview.jpg)
 
-## Find locally
+## Find Files And What Is Inside Them
 
-LOCALOCR combines fast filename search, manually scoped local content indexing, and file previews in one compact Windows desktop application. Local extraction stays on the computer. Optional AI OCR contacts a selected provider only after the user explicitly starts and confirms a bounded run.
+Search filenames across the native local catalog, or switch to **In-File** to search indexed document text. Select a result to read it in the embedded viewer without opening another application.
 
-| Capability | What it provides |
+| Feature | What you can do |
 | --- | --- |
-| **Files** | Fast filename and path search backed by a native NTFS/MFT catalog with live USN Journal updates. |
-| **In-File** | Search text extracted from selected folders or, only when explicitly chosen, the entire PC. |
-| **Optional AI OCR** | After local extraction, process only unreadable images and scanned PDFs through a configured API or installed AI CLI. |
-| **Preview** | Images, PDF, Office documents, text, code, and compatible Windows preview handlers in a hidden isolated host. |
-| **Focused scope** | Limit filename or content work to a directory while retaining the option to search the PC. |
-| **Responsive results** | Bounded rendering, background engine work, sortable columns, quick filters, and highlighted matches. |
-| **Automatic engine recovery** | Restarts the native search service after an unexpected stop and reconnects without losing the existing catalog. |
-| **System, light, and dark** | Follows the Windows app theme by default while preserving explicit Light and Dark overrides. |
-| **Verified updates** | Shows a quiet **New update** reminder, then downloads Setup inside LOCALOCR only after the user opens it and confirms. |
-| **Companion access** | Provides a current-user-only, read-only search bridge for LOCALTOOL without installing another engine. |
+| **Files** | Find names and paths with a native NTFS/MFT catalog and live filesystem updates. |
+| **In-File** | Search locally extracted text and read highlighted Match snippets. |
+| **Preview** | Navigate PDF pages, find text, view formatted Word/RTF, inspect images, and use the bundled format viewers. |
+| **Content Indexer** | Choose a folder, start or resume local extraction, and monitor progress in a compact tray tool. |
+| **Optional AI OCR** | Process eligible unreadable files only after local indexing and your confirmation. |
+| **Multiple API keys** | Save encrypted key collections per provider; rotate on rate limits and wait/resume when all enabled keys are cooling down. |
+| **Large result sets** | Scroll through paged results with bounded rendering rather than loading millions of visual rows. |
+| **Your theme** | Follow Windows automatically, or select Light or Dark manually. |
+| **Quiet updates** | A download indicator announces updates. Open it to download, verify SHA-256, and choose when to run Setup. |
 
-LOCALOCR is independent software and does not require Everything or the Everything SDK.
+SEARCH-IN is independent software. It does not require Everything, EverythingToolbar, or QuickLook to be installed.
 
-## Get LOCALOCR
+## Four One-Minute Guides
 
-| Package | Best for | Download |
-| --- | --- | --- |
-| **Setup** | Recommended. Installs the application and LOCALOCR Engine service, creates shortcuts, and supports in-place updates. | [LOCALOCR-1.5.3.100-Setup.exe](https://github.com/promptedteam/LOCALOCR/releases/download/1.5.3.100/LOCALOCR-1.5.3.100-Setup.exe) |
-| **Portable** | Testing without a normal application install. Extract the complete ZIP before opening `LOCALOCR.exe`. | [LOCALOCR-1.5.3.100-portable.zip](https://github.com/promptedteam/LOCALOCR/releases/download/1.5.3.100/LOCALOCR-1.5.3.100-portable.zip) |
+**Play the videos directly below, inside GitHub.** Use each player's full-screen button for the clearest application text. No download is needed. An optional [larger gallery with captions](https://promptedteam.github.io/LOCALOCR/tutorials/) is also available.
 
-**Requirements:** Windows 10 or Windows 11, x64. LOCALOCR uses Microsoft .NET 10 Desktop Runtime. Setup detects it and can download the official Microsoft installer when required. The native engine statically includes its MSVC runtime, so a separate Visual C++ redistributable is not required.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-The Setup package requests administrator access to install the LOCALOCR Engine service. Portable mode can install that same service when requested or run an elevated temporary engine session.
+### 01 Install SEARCH-IN
 
-## Verify the download
+https://github.com/user-attachments/assets/4c880fe3-86d7-4cd4-8ea7-b12027ea57e5
 
-```text
-036C318B0D4416720B361DD53F4FFCCD5E27B7CA7C0C9B2A5C73D58948C9C348  LOCALOCR-1.5.3.100-Setup.exe
-8D6B8912EEC9FDF87BA6BA387D9F4768A974A982F0FD6EB58C167605EF066806  LOCALOCR-1.5.3.100-portable.zip
+**1 minute.** .NET Desktop Runtime, WebView2, and Setup. Clearly labeled installation walkthrough; the real GitHub download segment is being prepared separately.
+
+</td>
+<td width="50%" valign="top">
+
+### 02 Index And Optional AI
+
+https://github.com/user-attachments/assets/6e58c0e2-fc1a-4a80-909a-9b4769492583
+
+**1 minute.** Choose the index scope, extract locally first, check AI Pending, and save provider settings. No real API request is made in the demo.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 03 Find Files And Folders
+
+https://github.com/user-attachments/assets/ca18b79b-76c6-4544-8035-481268b1aa6f
+
+**1 minute.** Search names and extensions, use filters, select a directory, match paths, and preview a result.
+
+</td>
+<td width="50%" valign="top">
+
+### 04 Search Inside Files
+
+https://github.com/user-attachments/assets/c853e2c5-34a2-4b01-87be-6b5aca621686
+
+**1 minute.** Search indexed text, read Match snippets, navigate highlighted PDF matches, and preview text.
+
+</td>
+</tr>
+</table>
+
+The app demonstrations use synthetic files and fictional `C:\Demo` paths. No personal desktop, documents, or working API credentials are shown. Recordings are native 1920 x 1080 at 30 fps, with scripted pointers and on-screen guidance.
+
+## Get SEARCH-IN
+
+| Package | Best for |
+| --- | --- |
+| [**Setup**](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) | Recommended. Installs SEARCH-IN and its engine service, adds shortcuts, and supports future SEARCH-IN updates. |
+| [**Portable ZIP**](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-portable.zip) | Extract the complete ZIP before running `SearchIn.exe`. `Preview-Samples.cmd` opens synthetic samples without a PC-wide index. |
+
+**Requirements:** Windows 10 or 11, x64; Microsoft .NET 10 Desktop Runtime (x64); Microsoft Edge WebView2 Runtime. Setup checks the prerequisites and can obtain missing components from Microsoft with internet access. The engine does not require a separate Visual C++ redistributable.
+
+**Offline PC:** obtain the official standalone .NET Desktop Runtime and WebView2 Evergreen installers on another PC first. The small WebView2 bootstrapper needs internet and is not the offline runtime.
+
+**First run:** allow the engine to build its filename catalog. For document-text search, open **Tools > Open Content Indexer**, choose a scope, and press **Start**. AI OCR is optional and is not needed for documents whose text can be read locally.
+
+### Updating From Earlier Builds
+
+Install `2.1.0.103` once if you used an earlier local SEARCH-IN test build: those builds deliberately disabled online update checks. Future published SEARCH-IN updates use the in-app downloader. Existing SEARCH-IN configuration, encrypted keys, bookmarks, and indexes remain in their existing locations.
+
+LOCALOCR 1.x remains a separate installation. This release does not silently convert or delete its databases or credentials. Its old update feed remains valid. The repository URL is retained so existing links, releases, stars, and update channels keep working.
+
+## Preview Coverage
+
+| Category | Included viewers |
+| --- | --- |
+| **Documents** | PDF; Word DOCX/DOCM/DOTX/DOTM; formatted RTF; basic XLSX/XLSM worksheet values and PPTX/PPTM slide text. |
+| **Images and design** | JPEG, PNG, GIF/APNG, WebP, AVIF, BMP, ICO, SVG; supported PSD composites and PDF-compatible Illustrator files. |
+| **Text and developer files** | Text, syntax-highlighted code/configuration, sanitized Markdown, subtitles, archives, and a read-only binary hex view. |
+| **Media and specialist formats** | Supported video/audio codecs, CBZ/CBR comics, EPUB chapters, OBJ/STL/FBX geometry, MusicXML/MXL, and font specimens. |
+
+Word layout is approximate; advanced Office features, media codecs, and specialist formats have limits. RAW/HEIC/TIFF, EPS, MOBI/AZW, and legacy Office renderers are not bundled. See the [complete format matrix and limits](docs/PREVIEW-FORMATS.md) rather than assuming every QuickLook plugin is included.
+
+## Privacy And Verification
+
+Local indexing and previews stay on the computer. Optional AI OCR sends files only after you choose a provider and confirm a run. API credentials are protected for the current Windows account, stored outside the installation folder, and excluded from releases. See [AI OCR](docs/AI-OCR.md), [Privacy](PRIVACY.md), and [Security](SECURITY.md).
+
+Compare downloaded files with [SHA256SUMS.txt](https://github.com/promptedteam/LOCALOCR/releases/download/2.1.0.103/SHA256SUMS.txt):
+
+The application packages are not currently code-signed. Windows may show a publisher or SmartScreen warning; verify the release source and checksum before installing.
+
+```powershell
+Get-FileHash .\SEARCH-IN-2.1.0.103-Setup.exe -Algorithm SHA256
 ```
 
-The same values are included in `SHA256SUMS.txt` on the release page.
+## Distribution And Source
 
-## Privacy boundary
+This public repository contains downloads, documentation, approved demo media, and update metadata only. **Application source code remains private and is not uploaded here.** Release binaries are attached to GitHub Releases, not committed to the main branch. No credential files, local databases, user settings, or private captures belong in this repository.
 
-Filename catalogs, locally extracted content, settings, and bookmarks stay on the local computer. LOCALOCR has no telemetry or analytics client. AI OCR is off by default; when explicitly started, the selected provider receives only the pending files in that confirmed run. See [AI OCR](docs/AI-OCR.md) and [PRIVACY.md](PRIVACY.md) for the complete boundary.
+The release/download/star badges refresh through their badge service. No star-counter bot rewrites the README or updater manifests.
 
-## Version numbers
-
-LOCALOCR uses `MAJOR.MINOR.FEATURE.PATCH`:
-
-| Change size | Example |
-| --- | --- |
-| Small correction | `1.5.2.100` → `1.5.2.101` |
-| Feature update | `1.5.2.101` → `1.5.3.100` |
-| Broad product update | `1.5.3.100` → `1.6.0.100` |
-| Generational release | `1.x` → `2.0.0.0` |
-
-## Distribution and source
-
-This is the public **distribution repository**. It contains release information, screenshots, checksums, and update metadata. Release binaries are stored as GitHub Release assets rather than committed to the repository.
-
-LOCALOCR source code is maintained privately and is not included in this public distribution repository. Publishing releases here does not publish or license the source code.
+Version numbers use `MAJOR.MINOR.FEATURE.PATCH`; `2.1.0.103` is the current public SEARCH-IN build.
 
 ---
 
-<div align="center">
-  <strong>LOCALOCR 1.5.3.100</strong><br>
-  Search fast. Search locally.
-</div>
+<div align="center"><strong>SEARCH-IN 2.1.0.103</strong><br>Formerly LOCALOCR &middot; By promptedteam</div>

@@ -1,0 +1,86 @@
+{
+  "chapters": [
+    {
+      "id": "01-installation-walkthrough",
+      "title": "Install SEARCH-IN",
+      "seconds": 60,
+      "kind": "clearly labeled setup walkthrough; runtime states simulated; real GitHub download added after publishing"
+    },
+    {
+      "id": "02-first-index-and-ai",
+      "title": "First index and optional AI",
+      "seconds": 60,
+      "kind": "live local indexing; invalid demo key only; no AI request"
+    },
+    {
+      "id": "03-files-and-folders",
+      "title": "Find files and choose folders",
+      "seconds": 60,
+      "kind": "live filename filtering, folder scope and scrolling"
+    },
+    {
+      "id": "04-in-file-and-preview",
+      "title": "Search inside files and navigate matches",
+      "seconds": 60,
+      "kind": "live FTS search, PDF matches and preview scrolling"
+    }
+  ],
+  "verification": [
+    {
+      "id": "01-installation-walkthrough",
+      "decodedFrames": 1800,
+      "seconds": 60,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sampledPrivacyFrames": 60,
+      "maxSampleTimingDriftSeconds": 1.151,
+      "continuousNativeCapture": true,
+      "desktopCaptured": false,
+      "sha256": "edf2056a3733055a428d2965bf94b38aa839ac8a8133babd121f3b196c86d761"
+    },
+    {
+      "id": "02-first-index-and-ai",
+      "decodedFrames": 1800,
+      "seconds": 60,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sampledPrivacyFrames": 60,
+      "maxSampleTimingDriftSeconds": 2.191,
+      "continuousNativeCapture": true,
+      "desktopCaptured": false,
+      "sha256": "c0b8ff07fde1186544085f9d9f2255e7a4d56351315605de22c745952dd8ba11"
+    },
+    {
+      "id": "03-files-and-folders",
+      "decodedFrames": 1800,
+      "seconds": 60,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sampledPrivacyFrames": 60,
+      "maxSampleTimingDriftSeconds": 1.371,
+      "continuousNativeCapture": true,
+      "desktopCaptured": false,
+      "sha256": "912c200319add94a05ae135bd5e10df270e411e473e4ccd6137e223ee51317b2"
+    },
+    {
+      "id": "04-in-file-and-preview",
+      "decodedFrames": 1800,
+      "seconds": 60,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sampledPrivacyFrames": 60,
+      "maxSampleTimingDriftSeconds": 0.484,
+      "continuousNativeCapture": true,
+      "desktopCaptured": false,
+      "sha256": "70050765373c5b697d6d705de18c9cb73be22a942d17951299b0341637c98dce"
+    }
+  ],
+  "nativeResolution": "1920x1080",
+  "audio": false,
+  "setupWalkthroughSimulated": true,
+  "githubDownloadPendingPublication": true
+}
