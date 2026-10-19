@@ -102,8 +102,20 @@ h3 { font-size: 21px; font-weight: 600; letter-spacing: -.024em; }
 .header-nav a:hover, .github-link:hover { color: var(--ink); }
 .header-actions { margin-left: auto; gap: 20px; }
 .github-link { font-size: 12px; color: var(--muted); }
-.theme-toggle { width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; font-size: 22px; line-height: 1; }
-.theme-toggle:hover { background: var(--panel); }
+.theme-toggle { width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; padding: 0; background: color-mix(in srgb, var(--paper) 75%, transparent); transition: background .2s, border-color .2s, box-shadow .2s; }
+.theme-toggle:hover { background: var(--paper); border-color: var(--clay); box-shadow: 0 2px 12px #66553c12; }
+.theme-icon { width: 22px; height: 22px; stroke-width: 1.45; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+.theme-sun, .theme-moon { transform-origin: 12px 12px; transition: opacity .22s, transform .32s cubic-bezier(.2,.7,.3,1); }
+.theme-sun { stroke: var(--clay); opacity: 1; transform: rotate(0) scale(1); }
+.theme-sun circle { fill: color-mix(in srgb, var(--accent) 28%, transparent); }
+.theme-moon { opacity: 0; transform: rotate(-25deg) scale(.65); }
+.moon-crescent { fill: #b9c5ac22; }.moon-star { stroke: var(--clay); }
+:root[data-theme="dark"] .theme-sun { opacity: 0; transform: rotate(70deg) scale(.6); }
+:root[data-theme="dark"] .theme-moon { opacity: 1; transform: rotate(0) scale(1); }
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .theme-sun { opacity: 0; transform: rotate(70deg) scale(.6); }
+  :root:not([data-theme="light"]) .theme-moon { opacity: 1; transform: rotate(0) scale(1); }
+}
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 25px; border-radius: 6px; padding: 15px 21px; background: var(--accent); color: var(--accent-ink); font-size: 14px; font-weight: 700; line-height: 1.4; transition: background .2s, transform .2s; }
 .button:hover { background: var(--accent-hover); transform: translateY(-2px); }
 .button span { font-size: 20px; font-weight: 400; }
@@ -371,7 +383,7 @@ h3 { font-size: 21px; font-weight: 600; letter-spacing: -.024em; }
   .announcement { height: 28px; font-size: 10px; gap: 9px; }.announcement-note { display: none; }.new-label { font-size: 7px; }
   .site-header { height: 66px; top: 28px; padding: 0 14px; gap: 8px; }.brand { font-size: 15px; gap: 6px; }
   .brand img { width: 30px; height: 30px; }.brand-by { font-size: 8px; }.header-nav, .github-link { display: none; }
-  .header-actions { gap: 9px; }.theme-toggle { width: 28px; height: 28px; font-size: 19px; }
+  .header-actions { gap: 9px; }.theme-toggle { width: 30px; height: 30px; }.theme-icon { width: 19px; height: 19px; }
   .button-small { padding: 10px 11px; font-size: 10px; gap: 10px; }.button-small span { font-size: 14px; }
   .main-content { padding: 0 20px; }.section-block { padding: 52px 0; }.hero { padding: 34px 0 0; }
   h1 { font-size: clamp(35px,8.6vw,49px); line-height: 1.12; }h2 { font-size: 35px; }
