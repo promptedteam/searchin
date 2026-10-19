@@ -15,7 +15,7 @@
 
 [Download Setup](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) &middot; [Download Portable](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-portable.zip) &middot; [Release notes](https://github.com/promptedteam/searchin/releases/tag/2.1.0.103)
 
-[Explore the app](https://promptedteam.github.io/searchin/) &middot; [Learning hub](https://promptedteam.github.io/searchin/tutorials/)
+[Explore SEARCH-IN](https://searchin.pages.dev/) &middot; [Watch tutorials](https://searchin.pages.dev/#guides) &middot; [Roadmap](https://searchin.pages.dev/#roadmap)
 
 <a href="https://github.com/promptedteam/searchin/stargazers"><img alt="Star SEARCH-IN on GitHub" src="https://img.shields.io/github/stars/promptedteam/searchin?style=for-the-badge&logo=github&label=STAR%20SEARCH-IN&color=20a464&labelColor=1b2430&cacheSeconds=300"></a>
 
@@ -43,7 +43,7 @@ SEARCH-IN is independent software. It does not require Everything, EverythingToo
 
 ## Four One-Minute Guides
 
-**Play the videos directly below, inside GitHub.** Use each player's full-screen button for the clearest application text. No download is needed. An optional [larger gallery with captions](https://promptedteam.github.io/searchin/tutorials/) is also available.
+**Play the videos directly below, inside GitHub.** Use each player's full-screen button for the clearest application text. No download is needed. The [SEARCH-IN website](https://searchin.pages.dev/#guides) brings tutorials, timestamped steps, features, downloads, and the roadmap together on one page. Its videos stay in a two-column grid on desktop and mobile.
 
 <table>
 <tr>

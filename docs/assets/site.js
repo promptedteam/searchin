@@ -63,9 +63,54 @@
     document.querySelector('#format-status').textContent = `Showing ${count} preview categories: ${button.textContent}.`;
   }));
   const videos = [...document.querySelectorAll('video')];
-  videos.forEach(video => video.addEventListener('play', () => {
-    videos.forEach(other => { if (other !== video) other.pause(); });
-  }));
+  function expandInPage(video, trigger) {
+    const dialog = document.createElement('dialog');
+    dialog.className = 'video-theater';
+    dialog.setAttribute('aria-label', 'Expanded tutorial video');
+    const placeholder = document.createElement('div');
+    placeholder.className = 'video-placeholder';
+    placeholder.setAttribute('aria-hidden', 'true');
+    const closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.textContent = 'Close expanded video';
+    closeButton.className = 'theater-close';
+    const wasPlaying = !video.paused;
+    video.before(placeholder);
+    dialog.append(closeButton, video);
+    document.body.append(dialog);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeButton.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => {
+      const resume = !video.paused;
+      placeholder.replaceWith(video);
+      dialog.remove();
+      document.body.style.overflow = previousOverflow;
+      if (resume) video.play().catch(() => {});
+      trigger.focus();
+    }, { once: true });
+    dialog.showModal();
+    closeButton.focus();
+    if (wasPlaying) video.play().catch(() => {});
+  }
+  videos.forEach(video => {
+    video.addEventListener('play', () => {
+      videos.forEach(other => { if (other !== video) other.pause(); });
+    });
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'fullscreen-button';
+    button.textContent = 'Full screen';
+    button.setAttribute('aria-label', `View ${video.getAttribute('aria-label')} in full screen`);
+    button.addEventListener('click', async () => {
+      try {
+        if (video.requestFullscreen) await video.requestFullscreen();
+        else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+        else expandInPage(video, button);
+      } catch { expandInPage(video, button); }
+    });
+    video.closest('article')?.querySelector('.card-foot > span:last-child')?.replaceWith(button);
+  });
   document.querySelectorAll('[data-seek]').forEach(button => button.addEventListener('click', () => {
     const video = button.closest('article')?.querySelector('video');
     if (!video) return;
@@ -75,14 +120,69 @@
     else { video.addEventListener('loadedmetadata', seek, { once: true }); video.load(); }
     video.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'center' });
   }));
-  const menu = document.querySelector('.mobile-menu');
-  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
+  const sidebar = document.querySelector('#section-sidebar');
+  const toggle = document.querySelector('[data-menu-toggle]');
+  const backdrop = document.querySelector('[data-menu-backdrop]');
+  const close = document.querySelector('[data-menu-close]');
+  const mobile = matchMedia('(max-width: 950px)');
+  const main = document.querySelector('main');
+  let returnFocus;
+  function setMenu(open, restoreFocus = true) {
+    const expanded = open && mobile.matches;
+    document.body.classList.toggle('nav-open', expanded);
+    toggle?.setAttribute('aria-expanded', String(expanded));
+    if (backdrop) backdrop.hidden = !expanded;
+    if (main) main.inert = expanded;
+    if (sidebar) {
+      if (expanded) {
+        sidebar.setAttribute('role', 'dialog');
+        sidebar.setAttribute('aria-modal', 'true');
+        returnFocus = document.activeElement;
+        requestAnimationFrame(() => {
+          if (document.body.classList.contains('nav-open')) close?.focus();
+        });
+      } else {
+        sidebar.removeAttribute('role');
+        sidebar.removeAttribute('aria-modal');
+        if (restoreFocus && returnFocus && mobile.matches) returnFocus.focus();
+      }
+    }
+  }
+  toggle?.addEventListener('click', () => setMenu(!document.body.classList.contains('nav-open')));
+  close?.addEventListener('click', () => setMenu(false));
+  backdrop?.addEventListener('click', () => setMenu(false));
+  sidebar?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    setMenu(false);
+    if (link.hash) document.querySelector(link.hash)?.setAttribute('tabindex', '-1');
+  }));
+  mobile.addEventListener('change', () => setMenu(false, false));
+  document.addEventListener('keydown', event => {
+    if (!document.body.classList.contains('nav-open')) return;
+    if (event.key === 'Escape') { event.preventDefault(); setMenu(false); }
+    if (event.key === 'Tab') {
+      const items = [...sidebar.querySelectorAll('a[href], button')].filter(item => item.getClientRects().length);
+      const first = items[0];
+      const last = items.at(-1);
+      if (!sidebar.contains(document.activeElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first)?.focus();
+        return;
+      }
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    }
+  });
   if ('IntersectionObserver' in window) {
     const links = [...document.querySelectorAll('[data-section]')];
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        links.forEach(link => link.classList.toggle('is-active', link.dataset.section === entry.target.id));
+        links.forEach(link => {
+          const active = link.dataset.section === entry.target.id;
+          link.classList.toggle('is-active', active);
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
       });
     }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
     document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
