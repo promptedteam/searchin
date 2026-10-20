@@ -3,7 +3,7 @@
 Official URL: https://searchin.pages.dev/
 Publisher: promptedteam
 Distribution: https://github.com/promptedteam/searchin
-Current public Windows release: 2.1.0.103
+Current public Windows release: 2.1.0.104
 Pricing: The desktop app is free to use. Optional third-party AI usage can have separate fees and limits.
 Source availability: Closed source. The public GitHub repository contains downloads, documentation, demo media, website files, and updater metadata, not the application or engine source.
 
@@ -52,7 +52,7 @@ The AI demonstration uses an invalid demo credential and makes no provider reque
 Local indexing, filename search, document-content search, and previews run on the user's computer. Optional AI provider processing requires user approval.
 Provider credentials are protected for the Windows account and stored outside the installation directory. Public releases do not contain user credentials, databases, or private captures.
 The website has no sign-in or analytics scripts.
-SEARCH-IN 2.1.0.103 supports in-app update checking and downloading with a quiet download indicator. Users choose when to review and install an update.
+SEARCH-IN 2.1.0.104 supports in-app update checking and downloading with a quiet download indicator. Users choose when to review and install an update.
 LOCALOCR 1.x is a separate installation. SEARCH-IN does not silently migrate or delete its databases or credentials.
 
 ## Comparison With Other Search Apps

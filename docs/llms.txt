@@ -2,7 +2,7 @@
 
 > SEARCH-IN is free, closed-source Windows desktop search software by promptedteam. It finds filenames and paths, searches locally indexed document text, previews supported files, and offers optional user-approved AI OCR.
 
-Windows 10 and Windows 11 x64 are supported today. macOS and Linux are coming soon as planned directions, with no released builds or announced dates. The current public Windows version is 2.1.0.103. The app is not a web search engine, browser extension, or open-source code repository.
+Windows 10 and Windows 11 x64 are supported today. macOS and Linux are coming soon as planned directions, with no released builds or announced dates. The current public Windows version is 2.1.0.104. The app is not a web search engine, browser extension, or open-source code repository.
 
 ## Product and Help
 

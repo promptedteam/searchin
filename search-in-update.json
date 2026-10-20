@@ -1,7 +1,7 @@
 {
-  "latestVersion": "2.1.0.103",
-  "installerUrl": "https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe",
-  "downloadUrl": "https://github.com/promptedteam/searchin/releases/tag/2.1.0.103",
-  "sha256": "B4CAA79D8E0144D71BB8B3C9E0C116BF3F1683E17993AAD5AF661A1D2FD320C8",
-  "releaseNotes": "SEARCH-IN with improved previews, saved AI settings, and in-app updates."
+  "latestVersion": "2.1.0.104",
+  "installerUrl": "https://github.com/promptedteam/searchin/releases/download/2.1.0.104/SEARCH-IN-2.1.0.104-Setup.exe",
+  "downloadUrl": "https://github.com/promptedteam/searchin/releases/tag/2.1.0.104",
+  "sha256": "68CF416367588F0DA92A99B706277CEECCF8B5F8F9A33242B4FD08CE7F7D3E6B",
+  "releaseNotes": "Fixes result-column sorting, corrects Path, Ext and Modified order, and speeds up reversing the current sort."
 }
