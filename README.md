@@ -13,7 +13,7 @@
 ![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-1687ff?style=flat-square)
 ![Architecture](https://img.shields.io/badge/Architecture-x64-273142?style=flat-square)
 
-[Download Setup](https://github.com/promptedteam/searchin/releases/download/2.1.0.104/SEARCH-IN-2.1.0.104-Setup.exe) &middot; [Download Portable](https://github.com/promptedteam/searchin/releases/download/2.1.0.104/SEARCH-IN-2.1.0.104-portable.zip) &middot; [Release notes](https://github.com/promptedteam/searchin/releases/tag/2.1.0.104)
+[Download Setup](https://github.com/promptedteam/searchin/releases/download/2.1.0.105/SEARCH-IN-2.1.0.105-Setup.exe) &middot; [Download Portable](https://github.com/promptedteam/searchin/releases/download/2.1.0.105/SEARCH-IN-2.1.0.105-portable.zip) &middot; [Release notes](https://github.com/promptedteam/searchin/releases/tag/2.1.0.105)
 
 [Explore SEARCH-IN](https://searchin.pages.dev/) &middot; [Watch tutorials](https://searchin.pages.dev/#guides) &middot; [Roadmap](https://searchin.pages.dev/#roadmap)
 
@@ -36,6 +36,7 @@ Search filenames across the native local catalog, or switch to **In-File** to se
 | **Optional AI OCR** | Process eligible unreadable files only after local indexing and your confirmation. |
 | **Multiple API keys** | Save encrypted key collections per provider; rotate on rate limits and wait/resume when all enabled keys are cooling down. |
 | **Large result sets** | Scroll through paged results with bounded rendering rather than loading millions of visual rows. |
+| **Drag files out** | Select one or multiple results in Files or In-File and drag into Explorer or compatible apps. Ctrl requests Copy; Shift requests Move. |
 | **Your theme** | Follow Windows automatically, or select Light or Dark manually. |
 | **Quiet updates** | A download indicator announces updates. Open it to download, verify SHA-256, and choose when to run Setup. |
 
@@ -92,12 +93,12 @@ The app demonstrations use synthetic files and fictional `C:\Demo` paths. No per
 
 ## Get SEARCH-IN
 
-**New in 2.1.0.104:** corrected result-column sorting, accurate Path/Ext/Modified ordering, and faster sort-direction changes. [See what changed](docs/RELEASE-2.1.0.104.md).
+**New in 2.1.0.105:** drag selected files directly into folders or compatible apps, faster Path and Ext sorting, and shared Size/Modified metadata caching. The first Size/Modified sort across a large catalog can still take time. [See what changed](docs/RELEASE-2.1.0.105.md).
 
 | Package | Best for |
 | --- | --- |
-| [**Setup**](https://github.com/promptedteam/searchin/releases/download/2.1.0.104/SEARCH-IN-2.1.0.104-Setup.exe) | Recommended. Installs SEARCH-IN and its engine service, adds shortcuts, and supports future SEARCH-IN updates. |
-| [**Portable ZIP**](https://github.com/promptedteam/searchin/releases/download/2.1.0.104/SEARCH-IN-2.1.0.104-portable.zip) | Extract the complete ZIP before running `SearchIn.exe`. `Preview-Samples.cmd` opens synthetic samples without a PC-wide index. |
+| [**Setup**](https://github.com/promptedteam/searchin/releases/download/2.1.0.105/SEARCH-IN-2.1.0.105-Setup.exe) | Recommended. Installs SEARCH-IN and its engine service, adds shortcuts, and supports future SEARCH-IN updates. |
+| [**Portable ZIP**](https://github.com/promptedteam/searchin/releases/download/2.1.0.105/SEARCH-IN-2.1.0.105-portable.zip) | Extract the complete ZIP before running `SearchIn.exe`. `Preview-Samples.cmd` opens synthetic samples without a PC-wide index. |
 
 **Requirements:** Windows 10 or 11, x64; Microsoft .NET 10 Desktop Runtime (x64); Microsoft Edge WebView2 Runtime. Setup checks the prerequisites and can obtain missing components from Microsoft with internet access. The engine does not require a separate Visual C++ redistributable.
 
@@ -107,9 +108,9 @@ The app demonstrations use synthetic files and fictional `C:\Demo` paths. No per
 
 ### Updating From Earlier Builds
 
-Install `2.1.0.104` once if you used an earlier local SEARCH-IN test build: those builds deliberately disabled online update checks. Future published SEARCH-IN updates use the in-app downloader. Existing SEARCH-IN configuration, encrypted keys, bookmarks, and indexes remain in their existing locations.
+Install `2.1.0.105` once if you used an earlier local SEARCH-IN test build: those builds deliberately disabled online update checks. Future published SEARCH-IN updates use the in-app downloader. Existing SEARCH-IN configuration, encrypted keys, bookmarks, and indexes remain in their existing locations.
 
-Already on `2.1.0.103`? Reopen SEARCH-IN and use the quiet **New update** indicator. To test this exact update path from an older local build, install [2.1.0.103](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) once, then let it detect `2.1.0.104`.
+Already on `2.1.0.103` or `2.1.0.104` with update checks enabled? Reopen SEARCH-IN and use the quiet **New update** indicator. To test this update path from an older local build, install [2.1.0.103](https://github.com/promptedteam/searchin/releases/download/2.1.0.103/SEARCH-IN-2.1.0.103-Setup.exe) once, then let it detect `2.1.0.105`.
 
 LOCALOCR 1.x remains a separate installation. This release does not silently convert or delete its databases or credentials. Its old update feed remains valid. The repository is now `promptedteam/searchin`; GitHub redirects the former `promptedteam/LOCALOCR` repository links. Releases, stars, and inline videos are retained.
 
@@ -128,12 +129,12 @@ Word layout is approximate; advanced Office features, media codecs, and speciali
 
 Local indexing and previews stay on the computer. Optional AI OCR sends files only after you choose a provider and confirm a run. API credentials are protected for the current Windows account, stored outside the installation folder, and excluded from releases. See [AI OCR](docs/AI-OCR.md), [Privacy](PRIVACY.md), and [Security](SECURITY.md).
 
-Compare downloaded files with [SHA256SUMS.txt](https://github.com/promptedteam/searchin/releases/download/2.1.0.104/SHA256SUMS.txt):
+Compare downloaded files with [SHA256SUMS.txt](https://github.com/promptedteam/searchin/releases/download/2.1.0.105/SHA256SUMS.txt):
 
 The application packages are not currently code-signed. Windows may show a publisher or SmartScreen warning; verify the release source and checksum before installing.
 
 ```powershell
-Get-FileHash .\SEARCH-IN-2.1.0.104-Setup.exe -Algorithm SHA256
+Get-FileHash .\SEARCH-IN-2.1.0.105-Setup.exe -Algorithm SHA256
 ```
 
 ## Distribution And Source
@@ -142,8 +143,8 @@ This public repository contains downloads, documentation, approved demo media, a
 
 The release/download/star badges refresh through their badge service. No star-counter bot rewrites the README or updater manifests.
 
-Version numbers use `MAJOR.MINOR.FEATURE.PATCH`; `2.1.0.104` is the current public SEARCH-IN build.
+Version numbers use `MAJOR.MINOR.FEATURE.PATCH`; `2.1.0.105` is the current public SEARCH-IN build.
 
 ---
 
-<div align="center"><strong>SEARCH-IN 2.1.0.104</strong><br>Formerly LOCALOCR &middot; By promptedteam</div>
+<div align="center"><strong>SEARCH-IN 2.1.0.105</strong><br>Formerly LOCALOCR &middot; By promptedteam</div>
